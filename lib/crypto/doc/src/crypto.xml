@@ -412,6 +412,66 @@ Mpint() = <![CDATA[<<ByteLen:32/integer-big, Bytes:ByteLen/binary>>]]>
       </desc>
     </func>
     <func>
+      <name>sha224_mac(Key, Data) -> Mac</name>
+      <name>sha224_mac(Key, Data, MacLength) -> Mac</name>
+      <fsummary>Compute a <c>SHA-224 MAC</c>message authentification code</fsummary>
+      <type>
+        <v>Key = Data = iolist() | binary()</v>
+        <v>Mac = binary()</v>
+        <v>MacLenength = integer() =&lt; 28 </v>
+      </type>
+      <desc>
+        <p>Computes a <c>SHA-224 MAC</c> message authentification code
+          from <c>Key</c> and <c>Data</c>, where the default length of the Mac
+          is 224 bits (28 bytes).</p>
+      </desc>
+    </func>
+    <func>
+      <name>sha256_mac(Key, Data) -> Mac</name>
+      <name>sha256_mac(Key, Data, MacLength) -> Mac</name>
+      <fsummary>Compute a <c>SHA-256 MAC</c>message authentification code</fsummary>
+      <type>
+        <v>Key = Data = iolist() | binary()</v>
+        <v>Mac = binary()</v>
+        <v>MacLenength = integer() =&lt; 32 </v>
+      </type>
+      <desc>
+        <p>Computes a <c>SHA-256 MAC</c> message authentification code
+          from <c>Key</c> and <c>Data</c>, where the default length of the Mac
+          is 256 bits (32 bytes).</p>
+      </desc>
+    </func>
+    <func>
+      <name>sha384_mac(Key, Data) -> Mac</name>
+      <name>sha384_mac(Key, Data, MacLength) -> Mac</name>
+      <fsummary>Compute a <c>SHA-384 MAC</c>message authentification code</fsummary>
+      <type>
+        <v>Key = Data = iolist() | binary()</v>
+        <v>Mac = binary()</v>
+        <v>MacLenength = integer() =&lt; 48 </v>
+      </type>
+      <desc>
+        <p>Computes a <c>SHA-384 MAC</c> message authentification code
+          from <c>Key</c> and <c>Data</c>, where the default length of the Mac
+          is 384 bits (48 bytes).</p>
+      </desc>
+    </func>
+    <func>
+      <name>sha512_mac(Key, Data) -> Mac</name>
+      <name>sha512_mac(Key, Data, MacLength) -> Mac</name>
+      <fsummary>Compute a <c>SHA-512 MAC</c>message authentification code</fsummary>
+      <type>
+        <v>Key = Data = iolist() | binary()</v>
+        <v>Mac = binary()</v>
+        <v>MacLenength = integer() =&lt; 64 </v>
+      </type>
+      <desc>
+        <p>Computes a <c>SHA-512 MAC</c> message authentification code
+          from <c>Key</c> and <c>Data</c>, where the default length of the Mac
+          is 512 bits (64 bytes).</p>
+      </desc>
+    </func>
+    <func>
       <name>des_cbc_encrypt(Key, IVec, Text) -> Cipher</name>
       <fsummary>Encrypt <c>Text</c>according to DES in CBC mode</fsummary>
       <type>
