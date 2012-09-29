@@ -192,7 +192,9 @@ info(Config) when is_list(Config) ->
 	    {skip,"Missing crypto application"};
 	{_,_} ->
 	    ?line crypto:start(),
-	    ?line crypto:info(),
+	    ?line Info = crypto:info(),
+	    ?line Exports = dict:from_list(crypto:module_info(exports)),
+	    ?line true = lists:all(fun(N) -> dict:is_key(N,Exports) end, Info),
 	    ?line InfoLib = crypto:info_lib(),
 	    ?line [_|_] = InfoLib,
 	    F = fun([{Name,VerN,VerS}|T],Me) ->
